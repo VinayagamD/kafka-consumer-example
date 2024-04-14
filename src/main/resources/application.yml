@@ -1,0 +1,17 @@
+server:
+  port: 9292
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: vl-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        #        spring.json.trusted.packages: com.vinaylogics.dto
+        spring.deserializer.key.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+        spring.deserializer.value.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
+
+
+
+
